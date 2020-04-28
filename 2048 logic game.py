@@ -144,14 +144,17 @@ while True:
     if key == "w":
         mat, change = move_up(mat)
 
-    if key == "a":
+    elif key == "a":
         mat, change = move_left(mat)
 
-    if key == "s":
+    elif key == "s":
         mat, change = move_down(mat)
 
-    if key == "d":
+    elif key == "d":
         mat, change = move_right(mat)
+        
+    else:
+        print("Either a wrong key or no key has been pressed")
 
     result = get_current_state(mat)
     if result == 'WON':
